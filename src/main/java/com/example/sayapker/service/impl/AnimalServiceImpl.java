@@ -2,7 +2,7 @@ package com.example.sayapker.service.impl;
 
 import com.example.sayapker.dto.request.AnimalRequest;
 import com.example.sayapker.dto.response.AnimalResponse;
-import com.example.sayapker.exception.NotFoundException;
+import com.example.sayapker.exception.UserNotFoundException;
 import com.example.sayapker.mapper.AnimalMapper;
 import com.example.sayapker.model.entity.Animal;
 import com.example.sayapker.repository.AnimalRepository;
@@ -28,7 +28,7 @@ public class AnimalServiceImpl implements AnimalService {
     @Override
     public AnimalResponse getById(Long id) {
         Animal animal = animalRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("Animal not found with id: " + id));
+                .orElseThrow(() -> new UserNotFoundException("Animal not found with id: " + id));
         return AnimalMapper.toResponse(animal);
     }
 
@@ -43,7 +43,7 @@ public class AnimalServiceImpl implements AnimalService {
     @Override
     public AnimalResponse update(Long id, AnimalRequest request) {
         Animal animal = animalRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("Animal not found with id: " + id));
+                .orElseThrow(() -> new UserNotFoundException("Animal not found with id: " + id));
 
         animal.setName(request.getName());
         animal.setType(request.getType());
@@ -57,7 +57,7 @@ public class AnimalServiceImpl implements AnimalService {
     @Override
     public void delete(Long id) {
         if (!animalRepository.existsById(id)) {
-            throw new NotFoundException("Animal not found with id: " + id);
+            throw new UserNotFoundException("Animal not found with id: " + id);
         }
         animalRepository.deleteById(id);
     }

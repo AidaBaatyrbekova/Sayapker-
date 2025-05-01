@@ -5,7 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AuthRequest {
+public class UpdatePasswordRequest {
     private String email;
     private String password;
+    private String newPassword;
+    private String newConfirmPassword;
 }

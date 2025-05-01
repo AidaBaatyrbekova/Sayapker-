@@ -3,7 +3,9 @@ package com.example.sayapker.mapper;
 import com.example.sayapker.dto.request.AnimalRequest;
 import com.example.sayapker.dto.response.AnimalResponse;
 import com.example.sayapker.model.entity.Animal;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AnimalMapper {
 
     public static Animal toEntity(AnimalRequest request) {

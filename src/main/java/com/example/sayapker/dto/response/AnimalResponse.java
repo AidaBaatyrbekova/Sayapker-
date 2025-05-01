@@ -1,5 +1,4 @@
 package com.example.sayapker.dto.response;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

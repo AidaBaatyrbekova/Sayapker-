@@ -18,9 +18,9 @@ public class Animal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;           // Жаныбардын аты
-    private String type;           // Мисалы: ит, мышык, куш
-    private String description;    // Кыскача сүрөттөмө
-    private double price;          // Баасы
-    private String imageUrl;       // Сүрөттүн URL'и
+    private String name;
+    private String type;
+    private String description;
+    private double price;
+    private String imageUrl;
 }

@@ -3,7 +3,8 @@ package com.example.sayapker.dto.request;
 import com.example.sayapker.model.entity.Role;
 import lombok.*;
 
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserRegisterRequest {
@@ -11,4 +12,5 @@ public class UserRegisterRequest {
     private String email;
     private String password;
     private Role role;
+    private String phoneNumber;
 }
