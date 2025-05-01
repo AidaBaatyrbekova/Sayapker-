@@ -17,20 +17,6 @@ public class UserController {
     private JWTService jwtService;
     private final UserService userService;
 
-    // Пайдаланучы түзүү
-    @PostMapping("/register")
-    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest request) {
-        UserResponse userResponse = userService.createUser(request);
-        return ResponseEntity.ok(userResponse);
-    }
-
-    // Кирүү
-    @PostMapping("/login")
-    public ResponseEntity<AuthResponse> login(@Valid @RequestBody AuthRequest request) {
-        AuthResponse authResponse = userService.login(request);
-        return ResponseEntity.ok(authResponse);
-    }
-
     // Парольди калыбына келтирүү (элекспресс код менен)
     @PostMapping("/reset-password")
     public ResponseEntity<String> resetPassword(@Valid @RequestBody PasswordResetRequest request) {

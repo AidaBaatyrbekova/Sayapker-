@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")  // Бүтүндөй маршрут үчүн "/auth" жолу колдонулат
+@RequestMapping("/api/auth")  // Бүтүндөй маршрут үчүн "/auth" жолу колдонулат
 @RequiredArgsConstructor
 public class AuthController {
 

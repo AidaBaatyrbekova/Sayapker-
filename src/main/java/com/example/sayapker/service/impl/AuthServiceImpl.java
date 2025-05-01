@@ -8,13 +8,16 @@ import com.example.sayapker.model.entity.User;
 import com.example.sayapker.repository.UserRepository;
 import com.example.sayapker.security.jwt.JWTService;
 import com.example.sayapker.service.AuthService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.security.authentication.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@FieldDefaults (level = AccessLevel.PRIVATE, makeFinal = true)
 public class AuthServiceImpl implements AuthService {
 
     // Колдонуучу репозитори жана башка кызматтарды инъекциялоо

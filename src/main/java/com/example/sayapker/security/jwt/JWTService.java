@@ -17,7 +17,7 @@ import java.util.Date;
 @Component
 public class JWTService {
 
-    @Value("${spring.jwt.secret}")
+    @Value("${app.jwt.secret}")
     private String secretKey;
 
     private static final long TOKEN_EXPIRATION_DAYS = 7L; // 7 күнгө жарактуу
